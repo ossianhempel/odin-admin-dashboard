@@ -1,3 +1,117 @@
 * {
-    background-color: brown;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: white;
+    --blue-color: rgb(33, 158, 242);
+    --background-gray: lightgray;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.left-sidebar {
+    grid-area: 1/1/3/2;
+    border: 3px solid yellow;
+    background-color: var(--blue-color);
+}
+
+.nav-menu {
+    border: 1px solid red;
+
+}
+
+.support-menu {
+    border: 1px solid red;
+
+}
+
+.container-right {
+    grid-area: 1/2/3/3;
+    border: 3px solid yellow;
+}
+
+.header {
+    border: 2px solid greenyellow;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+.header-upper {
+    display: flex;
+    border: 2px solid greenyellow;
+    grid-row: 1/2;
+}
+
+.header-upper-search {
+    display: flex;
+}
+
+#query {
+    background-color: var(--background-gray);
+}
+
+.header-upper-profile {
+    display: flex;
+}
+
+.header-lower {
+    display: flex;
+    border: 2px solid greenyellow;
+    grid-row: 2/3;
+}
+
+.header-lower-legend {
+    border: 1px solid red;
+}
+
+.header-lower-buttons {
+    border: 1px solid red;
+    
+}
+
+.main-content {
+    background-color: var(--background-gray);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.projects {
+    border: 2px solid greenyellow;
+
+
+}
+
+.project-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+    grid-column: 1/2;
+
+}
+
+.card {
+    border: 1px solid red;
+    background-color: var(--white-color);
+}
+
+.right-sidebar {
+    border: 2px solid greenyellow;
+    grid-column: 2/3;
+}
+
+.right-sidebar-announcements-container {
+    border: 1px solid red;
+    background-color: var(--white-color);
+}
+
+.right-sidebar-trending-container {
+    border: 1px solid red;
+    background-color: var(--white-color);
+
 }
