@@ -43,8 +43,6 @@
 
 }
 
-
-
 .left-sidebar-nav-menu {
     border: 1px solid red;
     grid-row: 1/span 6;
@@ -124,22 +122,69 @@
 
 .projects {
     border: 2px solid greenyellow;
+    display: flex;
+    flex-direction: column;
 
 
 }
 
 .project-card-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(autofit, minmax(150px, 1fr));
     gap: 20px;
     grid-column: 1/2;
+    margin: 10px 15px 30px 15px;
+    border: 1px solid red;
 
 }
 
 .card {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(117, 117, 117);
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 200px;
+    border-left: 5px solid orange;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card p {
+    color: rgb(137, 135, 135);
+}
+
+.card-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* border: 2px solid red; */
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.card-img-container {
+    display: flex;
+    align-self: flex-end;
+    justify-content: end;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 15px;
+}
+
+.card > img {
+    height: 20px;
+    width: 20px;
+    
+    
 }
 
 .right-sidebar {
