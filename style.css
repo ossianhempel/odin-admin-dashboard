@@ -74,10 +74,13 @@
 .container-right {
     grid-area: 1/2/3/3;
     border: 3px solid yellow;
+    display: grid;
+    grid-template-rows: 1fr/4fr;
 }
 
 .header {
     /* border: 2px solid greenyellow; */
+    grid-row: 1/span 1;
     display: grid;
     grid-template-rows: 1fr 2fr;
     padding-left: 15px;
@@ -178,10 +181,12 @@
     background-color: var(--background-gray);
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .projects {
     /* border: 2px solid greenyellow; */
+    grid-row: 1 / span 1;
     display: flex;
     flex-direction: column;
     padding-left: 15px;
@@ -202,8 +207,8 @@
     grid-column: 1/2;
     margin-top: 10px;
     margin-right: 15px;
-    /* margin-bottom: 30px; */
     border: 1px solid red;
+    height: px;
 
 }
 
@@ -258,7 +263,7 @@
 }
 
 .right-sidebar {
-    border: 2px solid greenyellow;
+    grid-row: 1 / span 1;
     grid-column: 2/3;
     padding-right: 20px;
     padding-left: 20px;
@@ -266,12 +271,12 @@
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    border: 2px solid greenyellow;
 
 }
 
-.right-sidebar-announcements-container {
-    padding-top: 30px;
+.right-sidebar-announcements-container, .right-sidebar-trending-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -280,7 +285,19 @@
     gap: 20px;
 }
 
-.right-sidebar-announcements-container-section {
+.right-sidebar-announcements-container {
+    padding-top: 30px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    gap: 20px; */
+}
+
+
+
+.right-sidebar-announcements-container-section, .right-sidebar-trending-container-section {
     margin: auto 20px;
     padding-bottom: 20px;
 }
@@ -300,5 +317,26 @@
 
 .right-sidebar-trending-container {
     border: 1px solid red;
-
+    padding-top: 20px;
 }
+
+.right-sidebar-trending-container-section {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+
+.right-sidebar-trending-container-section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.right-sidebar-trending-container-section-text h4 {
+    font-size: 18px;
+}
+
+.right-sidebar-trending-container-section-text p {
+    color: var(--font-gray);
+}
+
